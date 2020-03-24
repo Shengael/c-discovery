@@ -1,7 +1,10 @@
 ﻿namespace kebab
 {
-    public class IngredientType
+    public enum IngredientType
     {
-        
+        Vegie,
+        Poisson,
+        Crevette,
+        Poulet
     }
 }

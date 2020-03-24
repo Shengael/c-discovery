@@ -5,9 +5,9 @@ namespace kebab
     public class Kebab
     {
 
-        bool isVegie(List<Ingredient> ingredients)
+        bool isVegie(List<Ingredient> ingredients, List<IngredientType> types)
         {
-            return !ingredients.Exists(ingredient => ingredient.Type != "vegie");
+            return !ingredients.Exists(ingredient => types.Contains(ingredient.Type));
         }
     }
 }
