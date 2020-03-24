@@ -2,9 +2,10 @@
 
 namespace kebab
 {
-    public interface Ingredient
+    public class Ingredient
     {
-        public string Name {get; set;}
-        public string Type {get; set;}
+        public String Name { get; set; }
+        public String Type { get; set; }
+
     }
 }

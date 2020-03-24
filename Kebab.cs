@@ -7,7 +7,7 @@ namespace kebab
 
         bool isVegie(List<Ingredient> ingredients)
         {
-            return !ingredients.Exists(Ingredient => Ingredient.Type != "vegie");
+            return !ingredients.Exists(ingredient => ingredient.Type != "vegie");
         }
     }
 }
