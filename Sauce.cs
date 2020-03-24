@@ -2,6 +2,8 @@
 {
     public enum Sauce
     {
-        
+        Algerienne,
+        Blanche,
+        Samourai
     }
 }

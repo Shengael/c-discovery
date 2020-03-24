@@ -4,10 +4,24 @@ namespace kebab
 {
     public class Kebab
     {
+        
+        private List<Ingredient> Ingredients;
+        private List<Sauce> Sauces = new List<Sauce>();
 
-        public bool CheckType(List<Ingredient> ingredients, List<IngredientType> types)
+        public Kebab(List<Ingredient> ingredients)
         {
-            return !ingredients.Exists(ingredient => !types.Contains(ingredient.Type));
+            Ingredients = ingredients;
+        }
+
+        public bool CheckType(List<IngredientType> types)
+        {
+            return !Ingredients.Exists(ingredient => !types.Contains(ingredient.Type));
+        }
+
+        public bool addSauce(Sauce sauce)
+        {
+            Sauces.Add(sauce);
+            return true;
         }
     }
 }

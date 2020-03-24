@@ -16,9 +16,8 @@ namespace kebab
                 new Ingredient("salade", IngredientType.Vegie)
             };
 
-            var kebab = new Kebab();
-            
-            Console.Write(kebab.CheckType(i, new List<IngredientType>{IngredientType.Vegie, IngredientType.Poulet}));
+            var kebab = new Kebab(i);
+            Console.Write(kebab.CheckType(new List<IngredientType>{IngredientType.Vegie, IngredientType.Poulet}));
         }
     }
 }
