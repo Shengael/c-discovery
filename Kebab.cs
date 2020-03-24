@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace kebab
 {
@@ -31,7 +32,7 @@ namespace kebab
         public Kebab SansOignon()
         {
             var k = new Kebab(Ingredients);
-            k.Ingredients.RemoveAll(i => i.Type == IngredientType.Oignon);
+            k.Ingredients.RemoveAll(i => i.Name.ToLower() == "oignon" && i.Type == IngredientType.Vegie);
             k.Sauces.AddRange(Sauces);
             return k;
         }
@@ -41,14 +42,16 @@ namespace kebab
             var k = new Kebab(Ingredients);
             k.Sauces.AddRange(Sauces);
             
-            foreach (var i in Ingredients)
+            foreach (var i in Ingredients.Where(i => i.Type == IngredientType.Fromage).ToList())
             {
-                if (i.Type == IngredientType.Fromage)
-                {
-                    k.Ingredients.Add(i);
-                }
+                k.Ingredients.Add(i);
             }
             return k;
+        }
+
+        public override string ToString()
+        {
+            return "ingredients: " + string.Join(", ", Ingredients) + " Sauces: " + Sauces.ToString();
         }
     }
 }

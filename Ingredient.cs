@@ -13,5 +13,9 @@ namespace kebab
         public string Name { get; set; }
         public IngredientType Type { get; set; }
 
+        public override string ToString()
+        {
+            return "{ name: " + Name + ", type: " + Type + " }";
+        }
     }
 }
