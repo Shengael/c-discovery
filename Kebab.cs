@@ -36,7 +36,7 @@ namespace kebab
             return k;
         }
         
-        public Kebab Cheese()
+        public Kebab SupplementFromage ()
         {
             var k = new Kebab(Ingredients);
             k.Sauces.AddRange(Sauces);
