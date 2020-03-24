@@ -5,6 +5,8 @@
         Vegie,
         Poisson,
         Crevette,
-        Poulet
+        Poulet,
+        Oignon,
+        Fromage
     }
 }
